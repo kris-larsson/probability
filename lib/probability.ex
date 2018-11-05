@@ -30,6 +30,6 @@ defmodule Probability do
     Enum.each(0..6, fn i ->
       IO.puts "#{i} correct: #{Map.get(result_map, i)}, #{get_percent(result_map, i, iterations)}%"
     end)
-    DateTime.diff(DateTime.utc_now(), start_time, :millisecond)
+    IO.puts "Time #{DateTime.diff(DateTime.utc_now(), start_time, :millisecond) / 1000}s"
   end
 end
